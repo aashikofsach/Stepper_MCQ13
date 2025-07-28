@@ -27,3 +27,13 @@
   margin-bottom: 5px;
   z-index: 2;
 }
+
+.active .step-number {
+  background-color: blue;
+  color: white;
+}
+
+.complete .step-number {
+  background-color: green;
+  color: white;
+}
