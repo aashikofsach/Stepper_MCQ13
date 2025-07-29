@@ -4,7 +4,7 @@ function CheckoutStepper({ stepsConfig = [] }) {
     const [stepUser, setStepUser] = useState(1);
     const [completed, setCompleted] = useState(false)
 
-    let ActiveComponent = stepsConfig[stepUser-1].Component;
+    let ActiveComponent = stepsConfig[stepUser-1]?.Component;
 
 
     function handleNext()
@@ -36,6 +36,9 @@ function CheckoutStepper({ stepsConfig = [] }) {
 
                     </div>)
                 }
+                <div className="progress-bar">
+                    <div className="progress"></div>
+                </div>
             </div>
 
            <ActiveComponent/>
