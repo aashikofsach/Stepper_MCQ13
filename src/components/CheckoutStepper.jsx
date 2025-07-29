@@ -22,8 +22,8 @@ function CheckoutStepper({ stepsConfig = [] }) {
         setStepUser((prev)=> {
             if(prev=== stepsConfig.length)
             {
-                setCompleted(prev => !prev)
-                return
+                setCompleted(true)
+                return prev
             }
             else
             {

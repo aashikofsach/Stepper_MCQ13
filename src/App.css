@@ -28,6 +28,10 @@
   margin-bottom: 5px;
   z-index: 2;
 }
+.step-name {
+  font-size: 15px;
+  font-weight: bold;
+}
 
 .active .step-number {
   background-color: blue;
@@ -56,4 +60,14 @@
   background-color: green;
   /* width: 25%; */
   transition: width 0.3s ease;
+}
+
+.btn {
+  font-size: 15px;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+.message {
+  margin-bottom: 10px;
+  font-size: 20px;
 }
