@@ -6,6 +6,15 @@ function CheckoutStepper({ stepsConfig = [] }) {
 
     let ActiveComponent = stepsConfig[stepUser-1]?.Component;
 
+    function calculateProgressBarWidth()
+    {
+        console.log(Math.ceil(((stepUser-1)/(stepsConfig.length-1))*100))
+        if(Math.ceil(((stepUser-1)/(stepsConfig.length-1))*100) == 34)
+            return 36;
+        return Math.ceil(((stepUser-1)/(stepsConfig.length-1))*100)
+
+    }
+
 
     function handleNext()
     {
@@ -37,7 +46,7 @@ function CheckoutStepper({ stepsConfig = [] }) {
                     </div>)
                 }
                 <div className="progress-bar">
-                    <div className="progress"></div>
+                    <div className={`progress`} style={{width : `${calculateProgressBarWidth()}%`}}></div>
                 </div>
             </div>
 
